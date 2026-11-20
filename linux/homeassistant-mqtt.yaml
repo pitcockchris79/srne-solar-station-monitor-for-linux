@@ -1,0 +1,34 @@
+# Add to your Home Assistant configuration.yaml
+mqtt:
+  sensor:
+    - name: "SRNE Solar PV Power"
+      unique_id: "srne_solar_pv_power"
+      state_topic: "srne/telemetry"
+      value_template: "{{ value_json.solar.power_w }}"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+
+    - name: "SRNE Battery SOC"
+      unique_id: "srne_battery_soc"
+      state_topic: "srne/telemetry"
+      value_template: "{{ value_json.battery.soc_pct }}"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+
+    - name: "SRNE Battery Voltage"
+      unique_id: "srne_battery_voltage"
+      state_topic: "srne/telemetry"
+      value_template: "{{ value_json.battery.voltage_v }}"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+
+    - name: "SRNE AC Load Power"
+      unique_id: "srne_ac_load_power"
+      state_topic: "srne/telemetry"
+      value_template: "{{ value_json.inverter.load_power_w }}"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement

@@ -1,7 +1,21 @@
 {
-  "name": "react-example",
+  "name": "srne-solar-station-monitor-linux",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Linux telemetry console, Modbus RTU workbench, and ESP32/ESP8266 wireless offline logger for SRNE hybrid solar inverters and MPPT controllers.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "srne",
+    "solar",
+    "inverter",
+    "modbus-rtu",
+    "rs485",
+    "linux",
+    "esp32",
+    "esp8266",
+    "lifepo4",
+    "home-assistant"
+  ],
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",

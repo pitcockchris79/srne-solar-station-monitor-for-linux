@@ -1,8 +1,33 @@
+# Node / Web
 node_modules/
 build/
 dist/
 coverage/
-.DS_Store
 *.log
+npm-debug.log*
+
+# Environment & Secrets
 .env*
 !.env.example
+
+# PlatformIO / ESP32 / ESP8266 Firmware Artifacts
+.pio/
+.pioenvs/
+.piolibdeps/
+*.bin
+*.elf
+*.map
+
+# Python (Linux Daemon)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+

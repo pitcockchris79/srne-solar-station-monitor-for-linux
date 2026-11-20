@@ -1,0 +1,12 @@
+# udev rules for common USB-to-RS485 adapters (FTDI FT232RL, CH340, CP210x)
+# Copy to /etc/udev/rules.d/99-srne-rs485.rules and run:
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# FTDI FT232RL
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0660", GROUP="dialout", SYMLINK+="srne-inverter"
+
+# WCH CH340 / CH341
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0660", GROUP="dialout", SYMLINK+="srne-inverter"
+
+# Silicon Labs CP2102 / CP2104
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="0660", GROUP="dialout", SYMLINK+="srne-inverter"
